@@ -27,6 +27,7 @@ public class BookShop {
        
 
         // (1) 입력된 번호에 맞는 책을 찾아 대여 되었음(상태코드=0)을 체크 합니다.
+        //BookShop.java에서 입력받은 책 번호에 해당 책을 배열에서 찾아 rent메소드가 호출되도록 작성합니다.
         // 코드작성
         
         
@@ -38,6 +39,7 @@ public class BookShop {
     }
 
     //(2)전달받은 배열을 모두 출력하는 메소드
+    //(2)의 부분은 메소드의 매개변수로 전달된 배열에 저장된 모든 Book 객체의 정보를 출력할 수 있도록 작성합니다.
     private static void displayBookInfo(Book[] books) {
         
     	//코드작성
