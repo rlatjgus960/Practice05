@@ -60,8 +60,10 @@ public class Book {
 
 	//rent() : void
 	public void rent() {
-		this.stateCode = 0;
-		System.out.println(this.title+"이(가) 대여 됐습니다.\n");
+		if (stateCode == 1) { //////
+			this.stateCode = 0;
+			System.out.println(this.title+"이(가) 대여 됐습니다.\n");
+		}
 	}
 	
 	//print() : void
