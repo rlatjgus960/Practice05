@@ -30,7 +30,7 @@ public class BookShop {
         //BookShop.java에서 입력받은 책 번호에 해당 책을 배열에서 찾아 rent메소드가 호출되도록 작성합니다.
         // 코드작성
         for (int i=0; i<books.length; i++) {
-        	if (num==i+1) {
+        	if (num==books[i].getBookNo()) {
             	books[i].rent();
             }
         }
