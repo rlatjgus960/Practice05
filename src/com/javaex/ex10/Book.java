@@ -20,16 +20,14 @@ public class Book {
 	
 	//생성자
 	//생성자는 BookShop의 main메소드를 참고하여 각 멤버변수를 초기화할 수 있도록 작업합니다. 단, stateCode는 생성자 호출 시에 1로 세팅 되도록 설정합니다.
-
-
 	public Book(int bookNo, String title, String author) {
+		this.bookNo = bookNo;
+		this.title = title;
+		this.author = author;
 		this.stateCode = 1;
 	}
-	
-	
-	
-	
-	
+
+
 	/*모든 메소드는 public*/
 	//메소드-게터세터    
 	//bookNo, title, author에 대해서는 모든 setter/getter메소드를 추가
@@ -59,13 +57,23 @@ public class Book {
 
 	
     //메소드-일반
+
+	//rent() : void
+	public void rent() {
+		this.stateCode = 0;
+		System.out.println(this.title+"이(가) 대여 됐습니다.");
+		
+	}
 	
-
-
-
-
-	rent() : void
-	print() : void
+	//print() : void
+	public void print() {
+		if (this.stateCode == 1) {
+			System.out.println(bookNo+" 책 제목:"+title+", 작가:"+author+", 대여유무:재고있음");
+		}else if (this.stateCode == 0) {
+			System.out.println(bookNo+" 책 제목:"+title+", 작가:"+author+", 대여유무:대여중");
+		}
+		
+	}
 	
 	/*
 	rent() : 대여기능을 수행하는 메소드로 
@@ -75,6 +83,9 @@ public class Book {
 	print(): 책의 정보가 출력형태와 같이 출력될 수 있도록 작성합니다. 
 	이때 대여 유무는 Book클래스의 stateCode가 1이면 “재고있음”으로 0이면 “대여중”으로 출력되도록 설정합니다.
 	*/
+	
+	
+
     
     
 }
