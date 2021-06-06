@@ -49,9 +49,9 @@ public class BookShop {
     private static void displayBookInfo(Book[] books) {
     	//코드작성
     	for (int i=0; i<books.length; i++) {
-    		//System.out.println(books[i].getBookNo()+" 책 제목:"+books[i].getTitle()+", 작가:"+books[i].getAuthor()+", 대여유무:"+books[i].print());
-		books[i].print();
+    	books[i].print();
     	}        
+    	System.out.println("");
     	
     }
 }
